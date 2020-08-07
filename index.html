@@ -1,0 +1,296 @@
+<html>
+
+<head>
+    <title>Covid-19</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" href="images/quarantine.png" type="image/x-icon" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- jQuery library -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-table.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <script src="js/index.js"></script>
+
+</head>
+
+<body>
+    <div class="row" style="background-color: #f8f7fd;">
+        <div class="col-md-1 sidebar">
+            <div class="col-md-12 sidebar-inner">
+                <center>
+                    <div class="row side_icon" style="margin-top: 2em;">
+                        <center>
+                            <img class="main_img" src="images/quarantine.png" height="50px" width="50px">
+                        </center>
+                    </div>
+                    <div class="row side_text">
+                        <center>
+                            <h5 style="color: #f8f7fd;">COVID-</h5>
+                            <h5 style="color: #f8f7fd;">19</h5>
+                        </center>
+                    </div>
+                    <div class="row side_icon" style="margin-top: 0.5em;">
+                        <center>
+                            <div id="home" class="active" style=" height: 40px; width: 40px; border-radius: 10px; ">
+                                <span>
+                                    <img class="home_img" style="margin-top: 5px" src="images/home-run.png" alt="" height="25px" width="25px">
+                                </span>
+
+                            </div>
+                        </center>
+                    </div>
+                    <div class="row side_icon" style="margin-top: 1em;">
+                        <center>
+                            <div id="info" style=" height: 40px; width: 40px; border-radius: 10px; ">
+                                <span>
+                                    <img class="info_img" style="margin-top: 5px" src="images/information.png" alt="" height="20px" width="20px">
+                                </span>
+                            </div>
+                        </center>
+                    </div>
+                </center>
+            </div>
+        </div>
+        <div class="col-md-11 col-xs-12 main_right" style="height: 100%;overflow-y: scroll; padding: 0;">
+            <div class="col-md-10 col-md-offset-1 ">
+                <div class="row " style="margin-top: 1em; ">
+                    <h3 class="h3_font" style="float: left;color: #2f244e; ">
+                        <b>COVID-19 India Update</b>
+                    </h3>
+                    <button id="global_btn" class="btn " style="float: right;margin-top: 1em;background: #2f244e;color: #f8f7fd;border-radius: 10px; ">
+                        <span>
+                            <img src="images/world.png" alt="" height="15px" width="15px">
+                        </span> WORLD</button>
+                </div>
+                <div class="row " style="margin-top: 1em; ">
+                    <div class="col-md-3 col-xs-6 wid ">
+                        <div class="col-md-12 update_ballon " style="background-color: #ece7fd; ">
+                            <div class="row ">
+                                <h4 style="float: left;color: #615889; ">
+                                    <b>Total</b>
+                                </h4>
+                                <div style="border-radius: 50%;height: 12px;width: 12px;background-color: #615889;float: right;margin-top: 1em; "></div>
+                            </div>
+                            <div class="row ">
+                                <h3 style="margin: 0;color: #615889; ">
+                                    <b>
+                                        <span id="total_case" class="count"></span>
+                                    </b>
+                                </h3>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6 wid ">
+                        <div class="col-md-12 update_ballon " style="background-color: #d6e6fd; ">
+                            <div class="row ">
+                                <h4 style="float: left;color: #2e62b6; ">
+                                    <b>Active</b>
+                                </h4>
+                                <div style="border-radius: 50%;height: 12px;width: 12px;background-color: #2e62b6;float: right;margin-top: 1em; "></div>
+                            </div>
+                            <div class="row ">
+                                <h3 style="margin: 0;color: #2e62b6; ">
+                                    <b>
+                                        <span id="total_conf_case" class="count"></span>
+                                    </b>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 wid col-xs-6 ">
+                        <div class="col-md-12 update_ballon " style="background-color: #ecfef3; ">
+                            <div class="row ">
+                                <h4 style="float: left;color: #62b86f; ">
+                                    <b>Recovered</b>
+                                </h4>
+                                <div style="border-radius: 50%;height: 12px;width: 12px;background-color: #62b86f;float: right;margin-top: 1em; "></div>
+                            </div>
+                            <div class="row ">
+                                <h3 style="margin: 0;color: #62b86f; ">
+                                    <b>
+                                        <span id="recovered_cases" class="count"></span>
+                                    </b>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 wid  col-xs-6">
+                        <div class="col-md-12 update_ballon " style="background-color: #fbeaea; ">
+                            <div class="row ">
+                                <h4 style="float: left;color: #e83d36; ">
+                                    <b>Deaths</b>
+                                </h4>
+                                <div style="border-radius: 50%;height: 12px;width: 12px;background-color: #e83d36;float: right;margin-top: 1em; "></div>
+                            </div>
+                            <div class="row ">
+                                <h3 style="margin: 0;color: #e83d36; ">
+                                    <b>
+                                        <span id="death_case" class="count"></span>
+                                    </b>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-4 " style="height: 33.5em; ">
+                        <div class="col-md-12 " style="box-shadow: 3px 0px 13px -7px #2f244e;background-color: #ece7fd;height: 90%;border-radius: 15px;margin-top: 1em; ">
+                            <div class="row " style="height: 95%;margin-top: 1em; ">
+                                <table id="state_table" data-search="true" data-toggle="table" data-toolbar="#toolbar">
+                                    <tbody>
+                                        <thead>
+                                            <tr>
+                                                <th data-field="confirmed">Cases</th>
+                                                <th data-field="state">State Name</th>
+                                            </tr>
+                                        </thead>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 " style="height: 34.5em;">
+                        <div class="col-md-12" style="height: 96%;margin-top: 1em;padding: 0">
+                            <div class="row">
+                                <h4 style="float: left;color: #2f244e;">
+                                    <b>Current Update</b>
+                                </h4>
+                                <h4 style="float: right;color: #2f244e;font-size: 12px;line-height: 12px;">
+                                    <img src="images/timer.png" height="15px" width="15px" alt="">
+                                    <b id="timestamp">
+
+                                    </b>
+                                </h4>
+                            </div>
+                            <div class="row" style="margin-top: 1em;">
+                                <div class="col-md-4 col-xs-12 below_rect">
+                                    <div class="col-md-12" style="background-color:#ece7fd;height: 100%;padding: 0;border-radius: 3px;">
+                                        <div class="col-md-1 col-xs-1" style="padding: 0;width: 3px !important;height: 100%;background-color: #615889;border-radius: 3px 0 0 3px;">
+
+                                        </div>
+                                        <div class="col-md-11 col-xs-11" style="padding: 0 0 0 10px;">
+                                            <h5 style="float: left;font-size: 12px;line-height: 16px;color: #615889;">
+                                                <b>New Cases</b>
+                                            </h5>
+                                            <h5 style="float: right;font-size: 12px;line-height: 16px;color: #615889;">
+                                                <span id="new_case" class="count">
+                                                    <b></b>
+                                                </span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-xs-12 below_rect">
+                                    <div class="col-md-12" style="background-color:#fbeaea;height: 100%;padding: 0;border-radius: 3px;">
+                                        <div class="col-md-1 col-xs-1" style="padding: 0;width: 3px !important;height: 100%;background-color: #e83d36;border-radius: 3px 0 0 3px;">
+
+                                        </div>
+                                        <div class="col-md-11 col-xs-11" style="padding: 0 0 0 10px">
+                                            <h5 style="float: left;font-size: 12px;line-height: 16px;color: #e83d36;">
+                                                <b>Death Cases</b>
+                                            </h5>
+                                            <h5 style="float: right;font-size: 12px;line-height: 16px;color: #e83d36;">
+                                                <span id="new_death" class="count">
+                                                    <b></b>
+                                                </span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-xs-12 below_rect">
+                                    <div class="col-md-12" style="background-color:#ecfef3;height: 100%;padding: 0;border-radius: 3px;">
+                                        <div class="col-md-1 col-xs-1" style="padding: 0;width: 3px !important;height: 100%;background-color: #62b86f;border-radius: 3px 0 0 3px;">
+
+                                        </div>
+                                        <div class="col-md-11 col-xs-11" style="padding: 0 0 0 10px">
+                                            <h5 style="float: left;font-size: 12px;line-height: 16px;color: #62b86f;">
+                                                <b>Recovered</b>
+                                            </h5>
+                                            <h5 style="float: right;font-size: 12px;line-height: 16px;color: #62b86f;">
+                                                <span id="new_recover" class="count">
+                                                    <b></b>
+                                                </span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-xs-12 doc_img_tab" style="height: 75%;padding-left: 0">
+                                    <div class="col-md-12 pic_rect">
+                                        <div class="row" style="height: 85%;">
+                                            <img src="images/undraw_doctors_hwty.svg" height="90%" width="100%">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-xs-6" style="padding: 0;">
+                                                <div style="width: 100%;font-size: 15px;color: #2f244e;">
+                                                    <b>Prevention</b>
+                                                </div>
+                                                <div style="width: 100%;font-size: 11px;color: #615889;">Check WHO Guidelines</div>
+                                            </div>
+                                            <div class="col-md-6 col-xs-6" style="padding: 0;">
+                                                <a class="pull-right" href="#">
+                                                    <img style="margin-top: 5px;" src="images/send.png" alt="" height="25px" width="25px">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xs-12 doc_img_tab" style="height: 75%;padding-right: 0">
+                                    <div class="col-md-12 pic_rect">
+                                        <div class="row" style="height: 85%;">
+                                            <img src="images/undraw_doctor_kw5l.svg" height="100%" width="100%">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-xs-6" style="padding: 0;">
+                                                <div style="width: 100%;font-size: 15px;color: #2f244e;">
+                                                    <b>Symptoms</b>
+                                                </div>
+                                                <div style="width: 100%;font-size: 11px;color: #615889;">Check WHO Guidelines</div>
+                                            </div>
+                                            <div class="col-md-6 col-xs-6" style="padding: 0;">
+                                                <a class="pull-right" href="#">
+                                                    <img style="margin-top: 5px;" src="images/send.png" alt="" height="25px" width="25px">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row " style="height: 50px;">
+
+                </div>
+                <div id="chart1" class="row" style="margin-bottom: 2em">
+                    <div class="col-md-12">
+                        <div class="col-md-12" style="background-color: white;box-shadow: 1px 1px 10px 5px #ddd;border-radius: 20px;">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div id="chart2" class="row" style="margin-bottom: 2em">
+                    <div class="col-md-12">
+                        <div class="col-md-12" style="background-color: white;box-shadow: 1px 1px 10px 5px #ddd;border-radius: 20px;">
+                            <canvas id="mychart2"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

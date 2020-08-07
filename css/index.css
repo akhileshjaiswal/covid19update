@@ -1,0 +1,213 @@
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .sidebar-inner {
+        background: #2f244e;
+        height: 98%;
+        border-radius: 10px;
+        padding: 0;
+        margin-top: 0.5em;
+    }
+    
+    .sidebar {
+        height: 100vh;
+        padding: 0 10px 0 10px;
+    }
+    
+    .row {
+        margin: 0;
+    }
+    
+    .update_ballon {
+        border-radius: 20px;
+        height: 6em;
+        box-shadow: 3px 2px 16px -6px #2f244e;
+        padding-left: 20px;
+        margin-bottom: 1em;
+    }
+
+    .below_rect{
+        height: 2.5em;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 1em;
+    }
+    .pic_rect{
+        height: 90%;
+        background-color: #ece7fd;
+        border-radius: 10px;
+    }
+    
+    .wid {
+        padding: 0 10px 0 10px !important;
+    }
+    
+    input {
+        border: none;
+        width: 90%;
+        border-radius: 20px;
+        height: 30px;
+        padding-left: 10px;
+        color: #2f244e;
+    }
+    
+    input::placeholder {
+        color: #2f244e;
+        font-size: 12px;
+        opacity: 0.8;
+    }
+    
+    input:active,
+    input:focus {
+        outline: none;
+    }
+    
+    td {
+        border: none !important;
+        padding: 5px 5px 0px 25px !important;
+        color: #2f244e !important;
+        font-size: 15px;
+    }
+    
+     ::-webkit-scrollbar {
+        width: 8px;
+    }
+    /* Track */
+    
+     ::-webkit-scrollbar-track {
+        background: #cac5db;
+        border-radius: 20px;
+    }
+    /* Handle */
+    
+     ::-webkit-scrollbar-thumb {
+        background: #2f244e;
+        border-radius: 20px;
+    }
+    /* Handle on hover */
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: #2f244e;
+    }
+    
+    .active {
+        background-color: #615889;
+    }
+    
+    table.dataTable tbody tr {
+        background-color: transparent !important;
+    }
+    
+    table.dataTable.no-footer {
+        border: none !important;
+    }
+    
+    .dataTables_wrapper .dataTables_filter {
+        text-align: center !important;
+        color: #2f244e;
+    }
+
+    .btn:focus{
+        outline: none !important;
+    }
+
+    .fixed-table-body{
+        height: 86% !important;
+    }
+    .table-bordered{
+        border:none !important;
+    }
+    .form-control{
+        border-radius: 20px !important;
+        width: 19em !important;
+    }
+
+.info_api{
+    margin-top: 0.5em;
+    height: 3em;
+    background-color: white;
+    box-shadow: 1px 2px 3px 1px #ddd;
+    border-radius: 5px;
+}
+.h5_api{
+    display: inline-block;
+    margin-top: 14px;
+}
+
+    @media only screen and (max-width: 700px) {
+        body{
+            overflow: hidden !important;
+        }
+        .sidebar{
+            height: 10vh;
+        }
+        .side_icon{
+            margin-top: 0.5em !important;
+            display: inline-block !important;
+        }
+        .side_text{
+            display: none !important;
+        }
+        .input-group{
+            width: 100% !important;
+        }
+        .form-control{
+            width: 100% !important;
+        }
+        .main_img{
+            height: 40px;
+            width: 40px;
+            margin-top: 0.5em;
+        }
+        .home_img,.info_img{
+            height: 20px !important;
+            width: 20px !important;
+            margin-top: 7px !important;
+        }
+        #home,#info{
+            height: 35px !important;
+            width: 35px !important;
+        }
+        .info_api{
+            height: 4em !important;
+        }
+        .h5_api{
+            font-size: 16px !important;
+            margin-top: 11px !important;
+        }
+        .main2{
+            margin: 0 !important;
+        }
+        .img_tab{
+            margin: 0 !important;
+            border-right:none !important;
+            border-bottom:1px solid #ddd !important;
+        }
+        .main_tab{
+            height: 30em !important;
+            margin-bottom: 7em;
+        }
+        .code_img{
+            height: 50% !important;
+            margin-bottom: 1em;
+        }
+        .cen{
+            margin-top: 0 !important;
+        }
+        ::-webkit-scrollbar {
+            width: 1px;
+        }
+        #chart2,#chart1{
+            display: none;
+        }
+        .doc_img_tab{
+            padding: 0 !important;
+        }
+        .main_right2{
+            overflow-y: scroll !important;
+        }
+        .h3_font{
+            font-size: 20px !important;
+        }
+      }
